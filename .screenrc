@@ -1,0 +1,9 @@
+sessionname p-evol
+setenv ROOT $PWD
+chdir scripts
+screen -t scripts
+chdir $ROOT/test/scripts
+screen -t tscripts
+chdir $ROOT
+screen -t man
+screen -t root
