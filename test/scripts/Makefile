@@ -13,8 +13,12 @@ all: grasim2matrix
 clean:
 	@rm -rf *.out *.tmp err 
 
-grasim2matrix: grasim2matrix.00
+grasim2matrix: grasim2matrix.00 grasim2matrix.01
 
 grasim2matrix.00:
 	@../../scripts/grasim2matrix --transform=minus --transformval=1 $@.sim > $@.out
+	@$(CHECK)
+
+grasim2matrix.01:
+	@../../scripts/grasim2matrix --transform=inverse $@.sim > $@.out
 	@$(CHECK)
